@@ -46,4 +46,65 @@ const inventors = [
     { text: 'Ramen is my fav food ever', id: 123523 },
     { text: 'Nice Nice Nice!', id: 542328 }
   ];
+
+// //   Exercise 1: Array.prototype.filter()
+
+// // Filter the array of inventors into a new array containing only the inventors 
+// // born in the 1500's.
+// // - You have an array of inventors, each with a birth year listed by the property 
+// //   'year'.
+// // - Use the Array.prototype.filter() method to create a new array.
+// // - The new array, 'veryOldInventors', should only include inventors born between 
+// //   the years 1500 and 1599.
+// */
+// Complete the exercise in the space below:
+
+let veryOldInventors = inventors.filter(inventor => inventor.year >= 1500 && inventor.year <= 1599);
+
+// Check your work:
+// console.log('Exercise 1 my result: ', veryOldInventors)
+// console.log(
+//   'Exercise 1 correct result: ',
+//   [
+//     { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+//     { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 }
+//   ]
+// )
   
+/*
+Exercise 2: Array.prototype.map()
+
+Map the array of inventors into a new array. This new array should only contain
+objects with the inventors' first and last names.
+
+- For each inventor, return an object in this format: 
+  { first: "First Name", last: "Last Name" }.
+- The new array should be a collection of these objects, each representing an 
+  inventor with only their first and last names.
+
+Hint: Return a new object literal from the callback that looks like:
+      { first: "First Name", last: "Last Name" }
+*/
+// Complete the exercise in the space below:
+
+let inventorNames = inventors.map(inventor => ({ first: inventor.first, last: inventor.last }));
+// Check your work:
+console.log('Exercise 2 my result: ', inventorNames)
+console.log(
+  'Exercise 2 correct result: ',
+  [
+    { first: 'Albert', last: 'Einstein' },
+    { first: 'Isaac', last: 'Newton' },
+    { first: 'Galileo', last: 'Galilei' },
+    { first: 'Marie', last: 'Curie' },
+    { first: 'Johannes', last: 'Kepler' },
+    { first: 'Nicolaus', last: 'Copernicus' },
+    { first: 'Max', last: 'Planck' },
+    { first: 'Katherine', last: 'Blodgett' },
+    { first: 'Ada', last: 'Lovelace' },
+    { first: 'Sarah E.', last: 'Goode' },
+    { first: 'Lise', last: 'Meitner' },
+    { first: 'Hanna', last: 'Hammarström' }
+  ]
+)
+
